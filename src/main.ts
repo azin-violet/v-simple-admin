@@ -1,5 +1,13 @@
 import { createApp } from 'vue'
-import './style.css'
+// global styles
+import './styles/index.less'
+// temporarily icons setup
+import { setupEleIcon } from '@/plugins/element-icon'
 import App from './App.vue'
 
-createApp(App).mount('#app')
+
+const app = createApp(App)
+
+setupEleIcon(app)
+
+app.mount('#app')
