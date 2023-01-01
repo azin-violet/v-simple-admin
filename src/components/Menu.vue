@@ -1,14 +1,7 @@
 <template>
-    <el-radio-group v-model="isCollapse" style="margin-bottom: 20px">
-      <el-radio-button :label="false">expand</el-radio-button>
-      <el-radio-button :label="true">collapse</el-radio-button>
-    </el-radio-group>
     <el-menu
-      default-active="2"
-      class="el-menu-vertical-demo"
+      default-active="4"
       :collapse="isCollapse"
-      @open="handleOpen"
-      @close="handleClose"
     >
       <el-sub-menu index="1">
         <template #title>
@@ -41,39 +34,34 @@
         <template #title>Navigator Four</template>
       </el-menu-item>
     </el-menu>
-  </template>
+</template>
   
-  <script lang="ts" setup>
-  import { ref } from 'vue'
-  import {
-    Document,
-    Menu as IconMenu,
-    Location,
-    Setting,
-  } from '@element-plus/icons-vue'
-  import {
-    ElRadioGroup,
-    ElRadioButton,
-    ElMenu,
-    ElMenuItem,
-    ElIcon,
-    ElSubMenu,
-    ElMenuItemGroup,
-    
-  } from 'element-plus'
-  const isCollapse = ref(true)
-  const handleOpen = (key: string, keyPath: string[]) => {
-    console.log(key, keyPath)
-  }
-  const handleClose = (key: string, keyPath: string[]) => {
-    console.log(key, keyPath)
-  }
-  </script>
+<script lang="ts" setup>
+import { computed } from 'vue'
+import {
+  Document,
+  Menu as IconMenu,
+  Location,
+  Setting,
+} from '@element-plus/icons-vue'
+import {
+  ElMenu,
+  ElMenuItem,
+  ElIcon,
+  ElSubMenu,
+  ElMenuItemGroup,
   
-  <style>
-  .el-menu-vertical-demo:not(.el-menu--collapse) {
-    width: 200px;
-    min-height: 400px;
-  }
-  </style>
+} from 'element-plus'
+import { useAppStore } from '@/store/app'
+
+const store = useAppStore()
+const isCollapse = computed(() => store.getCollapse)
+</script>
+
+<style scoped>
+.el-menu--collapse {
+  width: var(--left-menu-min-width)
+}
+</style>
+  
   
