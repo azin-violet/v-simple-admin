@@ -1,13 +1,7 @@
 <template>
-    <div class="center">
-        Main App View
-    </div>
+    <RouterView #default="{ Component, route }">
+        <KeepAlive>
+            <component :is="Component" :key="route.fullPath" />
+        </KeepAlive>
+    </RouterView>
 </template>
-
-<script setup lang="ts">
-
-</script>
-
-<style scoped>
-
-</style>

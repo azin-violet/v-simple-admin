@@ -25,7 +25,8 @@
 
 <script setup lang="ts">
 import Logo from '@/components/Logo.vue'
-import Menu from '@/components/Menu.vue'
+// import Menu from '@/components/Menu.vue'
+import Menu from '@/components/Menu/index.vue'
 import TagsView from '@/components/TagsView.vue'
 import ToolHeader from './ToolHeader.vue'
 import AppView from './AppView.vue'

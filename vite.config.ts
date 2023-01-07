@@ -1,5 +1,7 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+// jsx
+import vueJsx from '@vitejs/plugin-vue-jsx'
 // plugins
 import ElementPlus from 'unplugin-element-plus/vite'
 import WindiCss from 'vite-plugin-windicss'
@@ -16,6 +18,7 @@ function pathResolve(dir: string) {
 export default defineConfig({
   plugins: [
     vue(),
+    vueJsx(),
     ElementPlus(),
     WindiCss(),
   ],

@@ -1,5 +1,5 @@
 <template>
-    <div class="v-logo flex h-[var(--logo-height)] items-center cursor-pointer">
+    <RouterLink class="v-logo flex h-[var(--logo-height)] items-center cursor-pointer" to="/">
         <img
             src="@/assets/vite.svg" alt="logo"
             class="
@@ -13,7 +13,7 @@
         >
             {{ title }}
         </div>
-    </div>
+    </RouterLink>
 </template>
 
 <script setup lang="ts">
