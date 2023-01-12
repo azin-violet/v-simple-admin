@@ -16,7 +16,7 @@
             trigger="click"
             @command="handleCommand"
             class="relative top-[25%] cursor-pointer hover:text-[var(--el-color-black)]">
-                <ElIcon :size="20"><Setting/></ElIcon>
+                <Icon :icon="setting"/>
                 <template #dropdown>
                     <ElDropdownMenu>
                         <ElDropdownItem command="closeOthers">Close Others</ElDropdownItem>
@@ -30,10 +30,11 @@
 
 <script setup lang="ts">
 import { useTagStore } from '@/store/tagsView';
-import { ElIcon, ElDropdown, ElDropdownMenu, ElDropdownItem } from 'element-plus';
-import { RefreshRight, Setting } from '@element-plus/icons-vue';
+import { ElDropdown, ElDropdownMenu, ElDropdownItem } from 'element-plus';
 import { useRoute } from 'vue-router';
 import Tag from './Tag.vue';
+import Icon from './Icon.vue';
+import setting from '~icons/ep/setting'
 
 const tagStore = useTagStore()
 const currentRoute = useRoute()

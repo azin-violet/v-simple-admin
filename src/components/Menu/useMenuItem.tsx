@@ -1,4 +1,3 @@
-import { innerRoutes } from "@/router/routes";
 import type { RouteRecordRaw } from "vue-router";
 import { hasorOneChildren } from "@/utils/routerHelper";
 import { ElMenuItem, ElSubMenu } from 'element-plus'

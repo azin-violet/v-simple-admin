@@ -2,10 +2,7 @@
     <RouterLink class="v-logo flex h-[var(--logo-height)] items-center cursor-pointer" to="/">
         <img
             src="@/assets/vite.svg" alt="logo"
-            class="
-            h-[calc(var(--logo-height)-10px)]
-            pl-2
-            "
+            class="h-[calc(var(--logo-height)-10px)] pl-2"
         >
         <div 
         v-if="!appStore.getCollapse"

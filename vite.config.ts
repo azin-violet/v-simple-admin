@@ -5,6 +5,7 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 // plugins
 import ElementPlus from 'unplugin-element-plus/vite'
 import WindiCss from 'vite-plugin-windicss'
+import Icons from 'unplugin-icons/vite'
 
 import {resolve} from 'path'
 
@@ -21,6 +22,9 @@ export default defineConfig({
     vueJsx(),
     ElementPlus(),
     WindiCss(),
+    Icons({
+      autoInstall: true,
+    }),
   ],
   resolve: {
     alias: [

@@ -1,4 +1,9 @@
 import type { RouteRecordRaw } from "vue-router";
+import fileDocument from '~icons/mdi/file-document'
+import laptop from '~icons/mdi/laptop'
+import dashboardFilled from '~icons/ant-design/dashboard-filled'
+import compassOutline from '~icons/ant-design/compass-outline'
+
 
 const constantRoutes: RouteRecordRaw[] = [
     {
@@ -26,6 +31,7 @@ const innerRoutes: RouteRecordRaw[] = [
         redirect: '/dashboard/analysis',
         meta: {
             title: 'Dashboard',
+            icon: dashboardFilled,
         },
         children: [
             {
@@ -33,7 +39,8 @@ const innerRoutes: RouteRecordRaw[] = [
                 name: 'Analysis',
                 component: () => import('@/views/dashboard/Analysis.vue'),
                 meta: {
-                    title: 'Analysis'
+                    title: 'Analysis',
+                    icon: compassOutline,
                 }
             },
             {
@@ -41,7 +48,8 @@ const innerRoutes: RouteRecordRaw[] = [
                 name: 'Workspace',
                 component: () => import('@/views/dashboard/Workspace.vue'),
                 meta: {
-                    title: 'Workspace'
+                    title: 'Workspace',
+                    icon: laptop,
                 }
             }
         ]
@@ -57,6 +65,7 @@ const innerRoutes: RouteRecordRaw[] = [
                 component: () => import('@/views/Document'),
                 meta: {
                     title: 'Document',
+                    icon: fileDocument,
                 }
             }
         ]

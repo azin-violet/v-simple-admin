@@ -1,4 +1,3 @@
-
 <script lang="tsx">
 import { defineComponent } from 'vue';
 import { useAppStore } from '@/store/app';
@@ -10,11 +9,9 @@ import { computed } from 'vue';
 
 export default defineComponent({
     name: 'Menu',
-    setup(props) {
-
+    setup() {
         const appStore = useAppStore()
         const { menuItem } = useMenuItem()
-
         const activeIndex = computed(() => useRoute().fullPath )
 
         return () => (

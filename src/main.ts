@@ -6,6 +6,8 @@ import './styles/index.less'
 import { setupEleIcon } from '@/plugins/element-icon'
 // windi css config
 import 'virtual:windi.css'
+// animate css
+import 'animate.css'
 // router
 import router from './router'
 
