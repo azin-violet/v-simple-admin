@@ -1,8 +1,10 @@
 <template>
     <div 
-    class="mx-1 py-1 px-1 border-solid border-1 flex items-center cursor-pointer"
+    class="mx-1 py-1 px-1 border border-[var(--el-border-color)] flex items-center cursor-pointer rounded"
     :class="{'bg-[var(--el-color-primary)] text-white': isActive}"
     >
+        <ElIcon :size="15">
+        </ElIcon>
         <RouterLink 
         :to="props.path" 
         class="text-sm"
@@ -20,10 +22,10 @@
 </template>
 <script setup lang="ts">
 import { ElIcon } from 'element-plus';
-import { Close } from '@element-plus/icons-vue';
 import { computed } from 'vue';
 import { useRoute } from 'vue-router';
 import { useTagStore } from '@/store/tagsView';
+import Close from '~icons/ep/close'
 
 interface Props {
     title: string,

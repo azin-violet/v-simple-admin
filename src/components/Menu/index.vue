@@ -28,4 +28,7 @@ export default defineComponent({
 .el-menu--collapse {
   width: var(--left-menu-min-width)
 }
+/* .el-menu {
+    border-right: none;
+} */
 </style>

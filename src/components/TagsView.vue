@@ -1,5 +1,5 @@
 <template>
-    <div class="flex items-center h-[var(--tag-view-height)] border-b">
+    <div class="flex items-center h-[var(--tag-view-height)]">
         <div class="flex-1">
             <div class="flex">
             <Tag 
@@ -8,14 +8,14 @@
             :title="view.title"/>
             </div>
         </div>
-        <!-- <div class="cursor-pointer px-2 h-full border-l text-[var(--el-text-color-regular)] hover:text-[var(--el-color-black)]">
+        <!-- <div class="cursor-pointer px-2 h-full border-l text-[var(--defalut-color)] hover:text-[var(--hover-color)]">
             <ElIcon :size="20" class="relative top-[25%]"><RefreshRight/></ElIcon>
         </div> -->
-        <div class="h-full border-l px-2">
+        <div class="h-full border-l border-[var(--el-border-color)] px-2">
             <ElDropdown 
             trigger="click"
             @command="handleCommand"
-            class="relative top-[25%] cursor-pointer hover:text-[var(--el-color-black)]">
+            class="relative top-[25%] cursor-pointer hover:text-[var(--hover-color)]">
                 <Icon :icon="setting"/>
                 <template #dropdown>
                     <ElDropdownMenu>
