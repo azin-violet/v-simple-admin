@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useWindowSize, useDark } from '@vueuse/core'
-import { watch } from 'vue';
-import { useAppStore } from './store/app';
+import { watch } from 'vue'
+import { useAppStore } from './store/app'
 import { setCssVar } from '@/utils'
 
 const { width } = useWindowSize()
@@ -11,18 +11,18 @@ watch(
   (width: number) => {
     if (width < 768) {
       appStore.mobile ? undefined : appStore.setMobile(true)
-      setCssVar('--left-menu-min-width', '0')
+      setCssVar('--left-menu-width-collapse', '0')
     } else {
       appStore.mobile ? appStore.setMobile(false) : undefined
-      setCssVar('--left-menu-min-width', '64px')
+      setCssVar('--left-menu-width-collapse', '64px')
     }
   },
   {
-    immediate: true
+    immediate: true,
   }
 )
-const isDark = useDark()
-console.log(isDark.value)
+// enable dark class
+useDark()
 </script>
 
 <template>

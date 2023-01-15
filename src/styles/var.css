@@ -1,0 +1,16 @@
+:root {
+    /* logo */
+    --logo-height: 50px;
+    /* left-menu */
+    --left-menu-width: 200px;
+    --left-menu-width-collapse: 64px;
+    /* transition */
+    --transition-time-02: 0.2s;
+    /* header */
+    --top-tool-height: var(--logo-height);
+    /* tags */
+    --tag-view-height: 40px;
+    /* colors */
+    --default-color: var(--el-text-color-regular);
+    --hover-color: var(--el-text-color-primary);
+}

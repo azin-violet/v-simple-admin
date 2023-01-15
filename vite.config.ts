@@ -6,11 +6,9 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 import ElementPlus from 'unplugin-element-plus/vite'
 import WindiCss from 'vite-plugin-windicss'
 import Icons from 'unplugin-icons/vite'
-
 import {resolve} from 'path'
 
 const root = process.cwd()
-
 function pathResolve(dir: string) {
   return resolve(root, '.', dir)
 }

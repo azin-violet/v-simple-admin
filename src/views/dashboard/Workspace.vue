@@ -1,3 +1,3 @@
 <template>
-    <div>workspace</div>
+  <div>workspace</div>
 </template>
