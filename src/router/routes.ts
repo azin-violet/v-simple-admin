@@ -1,8 +1,7 @@
 import type { RouteRecordRaw } from 'vue-router'
 import fileDocument from '~icons/mdi/file-document'
-import laptop from '~icons/mdi/laptop'
 import dashboardFilled from '~icons/ant-design/dashboard-filled'
-import compassOutline from '~icons/ant-design/compass-outline'
+import warning from '~icons/ep/warning-filled'
 
 const constantRoutes: RouteRecordRaw[] = [
   {
@@ -15,11 +14,6 @@ const constantRoutes: RouteRecordRaw[] = [
     name: 'Login',
     component: () => import('@/views/Login.vue'),
   },
-  {
-    path: '/404',
-    name: 'NotFound',
-    component: () => import('@/views/404.vue'),
-  },
 ]
 
 const innerRoutes: RouteRecordRaw[] = [
@@ -27,44 +21,46 @@ const innerRoutes: RouteRecordRaw[] = [
     path: '/dashboard',
     name: 'Dashboard',
     component: () => import('@/layout'),
-    redirect: '/dashboard/analysis',
-    meta: {
-      title: 'Dashboard',
-      icon: dashboardFilled,
-    },
+    redirect: '/dashboard/index',
     children: [
       {
-        path: 'analysis',
-        name: 'Analysis',
-        component: () => import('@/views/dashboard/Analysis.vue'),
+        path: 'index',
+        component: () => import('@/views/Dashboard.vue'),
         meta: {
-          title: 'Analysis',
-          icon: compassOutline,
-        },
-      },
-      {
-        path: 'workspace',
-        name: 'Workspace',
-        component: () => import('@/views/dashboard/Workspace.vue'),
-        meta: {
-          title: 'Workspace',
-          icon: laptop,
+          title: 'Dashboard',
+          icon: dashboardFilled,
         },
       },
     ],
   },
   {
-    path: '/document',
-    name: 'Document',
+    path: '/error',
+    name: 'Error',
     component: () => import('@/layout'),
-    redirect: '/document/index',
+    meta: {
+      title: 'Error',
+      icon: warning,
+    },
     children: [
       {
-        path: 'index',
-        component: () => import('@/views/Document'),
+        path: '404',
+        component: () => import('@/views/error/404.vue'),
         meta: {
-          title: 'Document',
-          icon: fileDocument,
+          title: '404',
+        },
+      },
+      {
+        path: '403',
+        component: () => import('@/views/error/403.vue'),
+        meta: {
+          title: '403',
+        },
+      },
+      {
+        path: '500',
+        component: () => import('@/views/error/500.vue'),
+        meta: {
+          title: '500',
         },
       },
     ],

@@ -13,4 +13,5 @@
     /* colors */
     --default-color: var(--el-text-color-regular);
     --hover-color: var(--el-text-color-primary);
+    --bg-color-dark: #292f3f;
 }

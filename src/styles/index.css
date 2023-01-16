@@ -6,5 +6,6 @@ html, body, #app {
 }
 
 html.dark {
-    background-color: #292f3f;
+    background-color: var(--bg-color-dark);
+    --el-menu-bg-color: var(--bg-color-dark);
 }
