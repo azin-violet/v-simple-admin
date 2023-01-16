@@ -42,7 +42,7 @@ const handleCommand = (command: string) => {
   if (command === 'closeOthers') {
     tagStore.clearOtherTags(currentRoute.fullPath)
   } else if (command === 'closeAll') {
-    if (currentRoute.name === 'Analysis') {
+    if (currentRoute.meta.firstPage) {
       tagStore.clearOtherTags(currentRoute.fullPath)
     } else {
       tagStore.clearAllTags()

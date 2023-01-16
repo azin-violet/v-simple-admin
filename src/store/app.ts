@@ -6,8 +6,8 @@ export const useAppStore = defineStore({
     return {
       collapse: false,
       mobile: false,
-      title: 'ViteAdmin',
-      repository: 'https://www.bing.com/',
+      title: 'SimpleAdmin',
+      repository: 'https://github.com/azin-violet/v-simple-admin/',
     }
   },
   actions: {

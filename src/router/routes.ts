@@ -1,5 +1,4 @@
 import type { RouteRecordRaw } from 'vue-router'
-import fileDocument from '~icons/mdi/file-document'
 import dashboardFilled from '~icons/ant-design/dashboard-filled'
 import warning from '~icons/ep/warning-filled'
 
@@ -29,6 +28,7 @@ const innerRoutes: RouteRecordRaw[] = [
         meta: {
           title: 'Dashboard',
           icon: dashboardFilled,
+          firstPage: true,
         },
       },
     ],

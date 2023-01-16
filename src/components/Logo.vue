@@ -5,7 +5,7 @@
       alt="logo"
       class="p-1 h-full w-[var(--left-menu-width-collapse)]"
     />
-    <div v-if="!appStore.collapse" class="text-lg font-bold mx-2">
+    <div v-if="!appStore.collapse" class="text-lg font-bold mx-1">
       {{ appStore.title }}
     </div>
   </RouterLink>
