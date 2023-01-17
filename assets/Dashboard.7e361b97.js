@@ -1,0 +1,1 @@
+import{_ as e}from"./_plugin-vue_export-helper.cdc0426e.js";import{j as t,h as o}from"./index.962c6c21.js";const r={},c={class:"text-center text-lg"};function s(a,n){return o(),t("div",c,"DashBoard")}const f=e(r,[["render",s]]);export{f as default};
